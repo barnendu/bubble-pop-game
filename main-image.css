@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+    background-position:  cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    
+
+}
+
+.bubble{
+    position: absolute;
+    top: 40vh;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    cursor: url("./images/injection.png"), auto;
+}
+.bubble-one{
+    display: none;
+}
+.bubble-two{
+    background-image: url("./images/covid1.png");
+
+}
+.bubble-three{
+    background-image: url("./images/covid1.png");
+
+}
+.bubble-four{
+    background-image: url("./images/covid1.png");
+
+}
+.bubble-five{
+    background-image: url("./images/covid1.png");
+
+}
+
+.score-board{
+    background: #fff;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: calc( 50% - 150px);
+
+}
+
+.loser{
+    display: none;
+}
+
+.winner{
+    display: none;
+}
+
+.main-game{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button.start-btn{
+    font-size:  20px;
+    border: none;
+    margin-top: 8px;
+    border-radius: 50px;
+    font-weight: bold;
+    height: 30px;
+    width: 10%;
+    margin: 8px auto;
+}
+
+.shadow{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    position: relative;
+}
+
+.total-score{
+    background: #fff;
+    padding: 10px 100px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
