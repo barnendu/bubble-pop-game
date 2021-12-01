@@ -13,13 +13,15 @@ const virusArray = ["Alpha", "Beta", "Gamma", "Delta", "Omicron"]
 function createBubbles() {
     let div = document.createElement('div');
     let rand = Math.floor(Math.random() * bubbles.length);
+    console.log("rand::", rand)
     div.className = 'bubble bubble-' + bubbles[rand];
     rand = Math.floor(Math.random() * (windowWidth - 150));
    
     div.style.left = rand + 'px';
+    div.style.top = windowHeight + 'px';
     div.dataset.number = currentBubble;
     currentBubble ++;
-    div.textContent = virusArray[Math. floor(Math. random()*virusArray. length)]
+    div.textContent = virusArray[Math.floor(Math.random()*virusArray. length)]
     document.body.appendChild(div);
     annimateBubbles(div)
 }
@@ -29,8 +31,8 @@ function annimateBubbles(elem) {
     let random = Math.floor(Math.random() * 6 -3);
     let interval = setInterval(frame , 12 - Math.floor(noPop / 10) + random);
     function frame(){
-        if( position >= (windowHeight + 200) && (currentBubble - noPop) > 10 && document.querySelector
-        ('[data-number = "' + elem.dataset.number +'"]') !== null){
+        if( currentBubble > 60 && ( document.querySelector
+        ('[data-number = "' + elem.dataset.number +'"]') !== null )){
           clearInterval(interval);
           gameOver = true;
         }
@@ -56,6 +58,7 @@ function scoreUpdate(){
 function startGame(){
     restartGame();
     let timeout =0;
+    document.body.style.cursor = 'url("./images/injection-1.png"), auto';
     let loop = setInterval(function(){
         timeout = Math.floor(Math.random() * 600 -100);
         if(!gameOver && noPop !==total){
@@ -65,11 +68,13 @@ function startGame(){
             clearInterval(loop);
             shadow.style.display = 'flex';
             shadow.querySelector('.loser').style.display = 'block';
+            document.body.style.cursor = 'default';
         }
         else{
             clearInterval(loop);
             shadow.style.display = 'flex';
             shadow.querySelector('.winner').style.display = 'block';
+            document.body.style.cursor = 'default';
         }
     }, 800 + timeout);
 }
