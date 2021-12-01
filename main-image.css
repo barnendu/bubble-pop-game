@@ -23,25 +23,26 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    cursor: url("./images/injection.png"), auto;
+    cursor: url("./images/injection-1.png"), auto;
+    
 }
 .bubble-one{
     display: none;
 }
 .bubble-two{
-    background-image: url("./images/covid1.png");
+    background-image: url("./images/Coronavirus-1.png");
 
 }
 .bubble-three{
-    background-image: url("./images/covid1.png");
+    background-image: url("./images/Coronavirus-2.png");
 
 }
 .bubble-four{
-    background-image: url("./images/covid1.png");
+    background-image: url("./images/Coronavirus-3.png");
 
 }
 .bubble-five{
-    background-image: url("./images/covid1.png");
+    background-image: url("./images/Coronavirus-4.png");
 
 }
 
